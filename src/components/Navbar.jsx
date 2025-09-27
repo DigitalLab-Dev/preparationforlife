@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -67,6 +68,10 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className='w-full h-10 bg-gray-900 flex items-center justify-center gap-5 text-sm text-white'>
+        <Link href='/inquiry'>Book Free Counselling Session</Link>
+        <Link href='/registeration'>Student Registeration</Link>
+      </div>
       <div className="max-w-7xl mx-auto py-5  px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

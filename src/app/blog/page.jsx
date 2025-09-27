@@ -6,7 +6,7 @@ const BlogPage = () => {
       {/* Hero Image Section */}
         <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[100vh] overflow-hidden">
         <img
-          src='/blog-hero.jpg'
+          src='/blog-hero.jp         g'
           alt='about-hero'
           className="w-full h-full object-cover"
         />
