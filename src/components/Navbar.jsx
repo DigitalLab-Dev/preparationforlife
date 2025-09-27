@@ -76,7 +76,7 @@ const Navbar = () => {
           </span>
           <span> sales@pfl.ae ngsales12@pfl.ae </span>
         </div>
-        <div className="flex md:flex-row flex-col items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-2">
           <Link href="/inquiry" className="border-r-2 pr-4 mr-2">
             Book Free Counselling Session
           </Link>
