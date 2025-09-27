@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Link from 'next/link';
@@ -31,8 +31,8 @@ const Navbar = () => {
         { name: 'Company Profile', href: '/about/company-profile' },
         { name: 'Mission Statement', href: '/about/mission-statement' },
         { name: 'Core Values', href: '/about/core-values' },
-        { name: 'Policy and Terms', href: '/about/policy-terms' }
-      ]
+        { name: 'Policy and Terms', href: '/about/policy-terms' },
+      ],
     },
     {
       name: 'Services',
@@ -42,8 +42,8 @@ const Navbar = () => {
         { name: 'Application Process', href: '/services/application-process' },
         { name: 'Visa Guidance', href: '/services/visa-guidance' },
         { name: 'Service Fee', href: '/services/service-fee' },
-        { name: 'MPower', href: '/services/mpower' }
-      ]
+        { name: 'MPower', href: '/services/mpower' },
+      ],
     },
     {
       name: 'Destinations',
@@ -58,29 +58,36 @@ const Navbar = () => {
         { name: 'Study in Singapore', href: '/destinations/singapore' },
         { name: 'Study in USA', href: '/destinations/usa' },
         { name: 'Study in UK', href: '/destinations/uk' },
-        { name: 'Study in UAE', href: '/destinations/uae' }
-      ]
+        { name: 'Study in UAE', href: '/destinations/uae' },
+      ],
     },
     { name: 'Team', href: '/team' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className='w-full h-10 bg-gray-900 flex items-center justify-center gap-5 text-sm text-white'>
-        <Link href='/inquiry'>Book Free Counselling Session</Link>
-        <Link href='/registeration'>Student Registeration</Link>
+      <div className="w-full py-2 bg-gray-900 flex flex-col lg:flex-row items-center px-10 justify-between gap-5 text-sm text-white">
+        <div className="flex md:flex-row flex-col items-center justify-center gap-2">
+          <span className=" border-r-2 pr-2">
+            {' '}
+            +92 3331900448,+234 810188 3153
+          </span>
+          <span> sales@pfl.ae ngsales12@pfl.ae </span>
+        </div>
+        <div className="flex md:flex-row flex-col items-center justify-center gap-2">
+          <Link href="/inquiry" className="border-r-2 pr-4 mr-2">
+            Book Free Counselling Session
+          </Link>
+          <Link href="/registeration">Student Registeration</Link>
+        </div>
       </div>
       <div className="max-w-7xl mx-auto py-5  px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <img
-              className="h-18 w-auto"
-              src="/logo.png"
-              alt="Company Logo"
-            />
+            <img className="h-18 w-auto" src="/logo.png" alt="Company Logo" />
           </div>
 
           {/* Desktop Menu */}
@@ -90,7 +97,9 @@ const Navbar = () => {
                 <div
                   key={item.name}
                   className="relative group"
-                  onMouseEnter={() => item.dropdown && handleDropdownEnter(item.name)}
+                  onMouseEnter={() =>
+                    item.dropdown && handleDropdownEnter(item.name)
+                  }
                   onMouseLeave={() => item.dropdown && handleDropdownLeave()}
                 >
                   <a
@@ -99,10 +108,10 @@ const Navbar = () => {
                   >
                     {item.name}
                     {item.dropdown && (
-                      <ChevronDown 
+                      <ChevronDown
                         className={`ml-1 h-4 w-4 transition-transform duration-200 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} 
+                        }`}
                       />
                     )}
                   </a>
@@ -153,9 +162,13 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden transition-all duration-300 ease-in-out ${
-        isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-      }`}>
+      <div
+        className={`lg:hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? 'max-h-screen opacity-100'
+            : 'max-h-0 opacity-0 overflow-hidden'
+        }`}
+      >
         <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-50">
           {menuItems.map((item) => (
             <div key={item.name}>
@@ -171,10 +184,10 @@ const Navbar = () => {
                     onClick={() => handleDropdownClick(item.name)}
                     className="p-2 text-gray-900 hover:text-gray-700"
                   >
-                    <ChevronDown 
+                    <ChevronDown
                       className={`h-4 w-4 transition-transform duration-200 ${
                         activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} 
+                      }`}
                     />
                   </button>
                 )}
@@ -182,9 +195,11 @@ const Navbar = () => {
 
               {/* Mobile Dropdown */}
               {item.dropdown && (
-                <div className={`ml-4 space-y-1 transition-all duration-200 ${
-                  activeDropdown === item.name ? 'block' : 'hidden'
-                }`}>
+                <div
+                  className={`ml-4 space-y-1 transition-all duration-200 ${
+                    activeDropdown === item.name ? 'block' : 'hidden'
+                  }`}
+                >
                   {item.dropdown.map((dropdownItem) => (
                     <a
                       key={dropdownItem.name}
