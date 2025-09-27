@@ -45,32 +45,6 @@ export default function DestinationPage() {
     );
   }
 
-  // const LogoSection = ({ title, logos }) => {
-  //   if (!logos || logos.length === 0) return null;
-
-  //   return (
-  //     <div className="mb-16">
-  //       <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
-  //         {title}
-  //       </h2>
-  //       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8">
-  //         {logos.map((logo, index) => (
-  //           <div
-  //             key={index}
-  //             className="flex items-center justify-center p-4 transition-colors"
-  //           >
-  //             <img
-  //               src={logo}
-  //               alt={`${title} logo ${index + 1}`}
-  //               className="max-h-16 md:max-h-26 w-auto object-cover"
-  //             />
-  //           </div>
-  //         ))}
-  //       </div>
-  //     </div>
-  //   );
-  // };
-
   const LogoSection = ({ title, logos }) => {
     if (!logos || logos.length === 0) return null;
 

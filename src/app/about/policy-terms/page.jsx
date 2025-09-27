@@ -4,12 +4,13 @@ const Policy = () => {
   return (
     <div>
       {/* Hero Image Section */}
-      <div
-        className="relative w-full h-[60vh] md:h-screen bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/policy.jpg')",
-        }}
-      ></div>
+            <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[100vh] overflow-hidden">
+        <img
+          src='/policy.jpg'
+          alt='about-hero'
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Chairman Profile Section */}
       <section className="py-12 md:py-20 bg-white">

@@ -4,12 +4,12 @@ const BlogPage = () => {
   return (
     <div>
       {/* Hero Image Section */}
-      <div 
-        className="relative w-full h-screen bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/blog-hero.jpg')"
-        }}
-      >
+        <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[100vh] overflow-hidden">
+        <img
+          src='/blog-hero.jpg'
+          alt='about-hero'
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Blog Content Section */}

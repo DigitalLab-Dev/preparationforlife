@@ -64,12 +64,13 @@ const ServicesCommitmentSection = () => {
 
   return (
     <section >
-      <div
-        className="relative w-full h-[60vh] md:h-screen bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/fee2.png')",
-        }}
-      ></div>
+        <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[100vh] overflow-hidden">
+        <img
+          src='/fee2.png'
+          alt='about-hero'
+          className="w-full h-full object-cover"
+        />
+      </div>
       <div className="max-w-7xl py-16 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left - Image */}
