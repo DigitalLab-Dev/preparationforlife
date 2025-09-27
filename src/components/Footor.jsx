@@ -42,7 +42,7 @@ const Footer = () => {
             <div>
               <img
                 className="h-22 w-auto"
-                src="/logo.png"
+                src="/smallLogo.png"
                 alt="PFL Logo"
               />
             </div>
